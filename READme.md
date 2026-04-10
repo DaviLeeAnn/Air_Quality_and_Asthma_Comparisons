@@ -1,7 +1,7 @@
 
 # Breathing Easy: Air Quality and Asthma Comparisons Across Kentucky Regions
 
-An analysis of how air quality affects people with asthma across Kentucky regions. This project combines EPA air quality data, CDC data centered on asthma, and real-time PurpleAir sensor readings to explore disparities in medical care access, identify high risk areas, and determine whether the actual occurence of Asthma Peak Week aligns with the industry expected third week of September.
+An analysis of how air quality affects people with asthma across Kentucky regions. This project combines EPA air quality data, CDC data centered on asthma, and real-time PurpleAir sensor readings to explore disparities in medical care access, identify high risk areas, and determine whether the actual occurance of Asthma Peak Week aligns with the industry expected third week of September.
 
 
 ## Run Locally
@@ -81,7 +81,23 @@ GET https://api.purpleair.com/v1/sensors/${sensor_index}
 
 #### get_sensors_by_air_quality(threshold)
 
-Returns all Kentucky sensors where PM2.5 exceeds the given threshold.
+Returns all Kentucky sensors where PM2.5 exceeds the given threshold.## Findings
+
+Analysis focused on four Kentucky counties: Fayette, Pulaski, Pike, and Warren. Data sources included 2022 EPA air quality, CDC asthma outcomes, and real-time PurpleAir sensor data.
+
+**Air Quality Patterns**
+- June had the highest average air quality index (~56) across all four counties, consistent with the summer ozone season where heat accelerates ground-level ozone formation.
+- September, which contains the industry recognized Asthma Peak Week (third week of September), did not show a notably elevated air quality index relative to the annual average (~40-42). The 2022 data does not confirm mid-September as a uniquely hazardous air quality period in these counties.
+
+**Asthma Outcomes vs. Air Quality**
+- Fayette County had the highest asthma related emergency room visits (~1,100) but one of the lower median air quality indeces (~44), while Pulaski had the highest median air quality index (~52) but relatively fewer emergency room visits (~160).
+- This disconnect suggests population size is a major confounding factor, as Fayette County is the most populous county in the set by a wide margin likely due to the city of Lexington.
+- Fayette County's high emergency room visit count may also reflect its role as a regional referral hub, with high level hospitals drawing transfer patients from surrounding counties for more severe asthma cases.
+- Pike County showed the lowest emergency room visits and lowest median AQI, which does align with the expected relationship between air quality and health outcomes.
+
+**Conclusion**
+
+Air quality and asthma outcomes _are_ related, but the relationship is confounded by population size, access to care, and respiratory triggers unrelated to air quality alone. Future analysis could normalize ER visits by county population and incorporate socioeconomic indicators to better isolate the effect of air quality on asthma burden.
 ## Acknowledgements
  The following tools, libraries, and resources were used in this project:
 -	Python
@@ -91,6 +107,7 @@ Returns all Kentucky sensors where PM2.5 exceeds the given threshold.
 -	matplotlib
 -   seaborn
 -	folium
+-   sqlite3
 -	requests
 -	python-dotenv
 -	Claude (Anthropic)
