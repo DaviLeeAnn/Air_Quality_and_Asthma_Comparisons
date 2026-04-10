@@ -81,7 +81,9 @@ GET https://api.purpleair.com/v1/sensors/${sensor_index}
 
 #### get_sensors_by_air_quality(threshold)
 
-Returns all Kentucky sensors where PM2.5 exceeds the given threshold.## Findings
+Returns all Kentucky sensors where PM2.5 exceeds the given threshold.
+
+## Findings
 
 Analysis focused on four Kentucky counties: Fayette, Pulaski, Pike, and Warren. Data sources included 2022 EPA air quality, CDC asthma outcomes, and real-time PurpleAir sensor data.
 
