@@ -56,6 +56,21 @@ When done, deactivate the environment
 3. PurpleAir API
 - Fields used: PM2.5, Humidity, Temperature, Sensor Location (Latitude/Longitude)
 - Link: https://community.purpleair.com/t/about-the-purpleair-api/7145
+## Getting an API Key
+
+This project uses the PurpleAir API to retrieve realtime sensor data. To run the API notebook you will need a PurpleAir read key.
+
+1. Visit the PurpleAir Community Forum: https://community.purpleair.com/t/creating-api-keys/3951
+2. Sign in or create a free PurpleAir account (It is a token system, you get 1,000,000 for free when you sign up so don't worry about buying anything)
+3. Follow the instructions on that page to generate a **read** key (you do not need a write key for this project)
+4. Once you have your key, create a `.env` file in the root of the project directory and add the following line:
+
+```bash
+    PURPLEAIR_API_KEY=your_key_here
+```
+5. The API notebook will load this key automatically using `python-dotenv` — never share or commit your `.env` file publicly
+
+- Note: The `.env` file is already included in `.gitignore` to prevent your key from being accidentally pushed to GitHub.
 ## API Reference
 
 #### Get All Kentucky Sensors
