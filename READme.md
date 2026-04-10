@@ -1,7 +1,7 @@
 
 # Breathing Easy: Air Quality and Asthma Comparisons Across Kentucky Regions
 
-An analysis of how air quality affects people with asthma across Kentucky regions. This project combines EPA air quality data, CDC data centered on asthma, and real-time PurpleAir sensor readings to explore disparities in medical care access, identify high risk areas, and determine whether the actual occurance of Asthma Peak Week aligns with the industry expected third week of September.
+An analysis of how air quality affects people with asthma across Kentucky regions. This project combines EPA air quality data, CDC data centered on asthma, and real-time PurpleAir sensor readings to explore disparities in medical care access, identify high risk areas, and determine whether the actual occurence of Asthma Peak Week aligns with the industry expected third week of September.
 
 
 ## Run Locally
